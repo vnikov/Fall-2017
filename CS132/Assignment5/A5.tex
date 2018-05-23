@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+\title{Answer to Assignment 5}
+\author{Phumin Walaipatchara}
+\date{}
+\maketitle
+\noindent\textbf{Question 1}\\\\
+\indent(a)\indent
+\space$u_1 = 1v_1 - 3v_2 + 4v_3 = \begin{bmatrix}-2\\2\\3\end{bmatrix} - 3\begin{bmatrix}-8\\5\\2\end{bmatrix} + 4\begin{bmatrix}-7\\2\\6\end{bmatrix} = \begin{bmatrix}-6\\-5\\21\end{bmatrix}$
+\\\\\\
+\indent\indent\indent $u_2 = 2v_1 + 5v_2 + 6v_3 = 2\begin{bmatrix}-2\\2\\3\end{bmatrix} + 5\begin{bmatrix}-8\\5\\2\end{bmatrix} + 6\begin{bmatrix}-7\\2\\6\end{bmatrix} = \begin{bmatrix}-86\\41\\46\end{bmatrix}$
+\\\\\\
+\indent\indent\indent $u_3 = -1v_1 + 0v_2 + 1v_3 = -\begin{bmatrix}-2\\2\\3\end{bmatrix} + \begin{bmatrix}-7\\2\\6\end{bmatrix} = \begin{bmatrix}-5\\0\\3\end{bmatrix}$
+\\\\\\
+\indent\indent\indent The basis $\{u_1, u_2, u_3\} = \{\begin{bmatrix}-6\\-5\\21\end{bmatrix}, \begin{bmatrix}-86\\41\\46\end{bmatrix}, \begin{bmatrix}-5\\0\\3\end{bmatrix}\}$
+\\\\\\
+\indent(b)\indent
+\space $w_1 = P \times v_1 = \begin{bmatrix}1&2&-1\\-3&5&0\\4&6&1\end{bmatrix} \times \begin{bmatrix}-2\\2\\3\end{bmatrix} = \begin{bmatrix}-1\\16\\7\end{bmatrix} $
+\\\\\\
+\indent\indent\indent $ w_2 = P \times v_2 = \begin{bmatrix}1&2&-1\\-3&5&0\\4&6&1\end{bmatrix} \times \begin{bmatrix}-8\\5\\2\end{bmatrix} = \begin{bmatrix}0\\49\\0\end{bmatrix} $
+\\\\\\
+\indent\indent\indent $ w_3 = P \times v_3 = \begin{bmatrix}1&2&-1\\-3&5&0\\4&6&1\end{bmatrix} \times \begin{bmatrix}-7\\2\\6\end{bmatrix} = \begin{bmatrix}-9\\31\\-10\end{bmatrix} $
+\\\\\\
+\noindent\textbf{Question 2}\\\\
+\indent(a)\indent
+\space From $\beta$ to $C$
+\\\\
+\indent\indent\indent$\begin{bmatrix}1&-2&\vdots&7&-3\\-5&2&\vdots&5&1\end{bmatrix} =$
+$ \begin{bmatrix}1&0&\vdots&-3&0.5\\0&1&\vdots&-5&1.75\end{bmatrix}$
+\\\\\\
+\indent\indent\indent So the change of coordinates matrix from $\beta$ to $C$ is $ \begin{bmatrix}-3&0.5\\-5&1.75\end{bmatrix}$
+\\\\\\\\\\
+\indent\indent\indent From $C$ to $\beta$
+\\\\
+\indent\indent\indent$\begin{bmatrix}7&-3&\vdots&1&-2\\5&1&\vdots&-5&-2\end{bmatrix} =$
+$ \begin{bmatrix}1&0&\vdots&-0.6364&0.1818\\0&1&\vdots&-1.8182&1.0909\end{bmatrix}$
+\\\\\\
+\indent\indent\indent So the change of coordinates matrix from $C$ to $\beta$ is $ \begin{bmatrix}-0.6364&0.1818\\-1.8182&1.0909\end{bmatrix}$
+\\\\
+\indent(b)\indent
+\space From $\beta$ to $C$
+\\\\
+\indent\indent\indent$\begin{bmatrix}1&1&\vdots&-1&-1\\4&1&\vdots&8&-5\end{bmatrix} =$
+$ \begin{bmatrix}1&0&\vdots&3&-1.3333\\0&1&\vdots&-4&0.3333\end{bmatrix}$
+\\\\\\
+\indent\indent\indent So the change of coordinates matrix from $\beta$ to $C$ is $ \begin{bmatrix}3&-1.3333\\-4&0.3333\end{bmatrix}$
+\\\\\\
+\indent\indent\indent From $C$ to $\beta$
+\\\\
+\indent\indent\indent$\begin{bmatrix}-1&-1&\vdots&1&1\\8&-5&\vdots&4&1\end{bmatrix} =$
+$ \begin{bmatrix}1&0&\vdots&-0.0769&-0.3077\\0&1&\vdots&-0.9231&-0.6923\end{bmatrix}$
+\\\\\\
+\indent\indent\indent So the change of coordinates matrix from $C$ to $\beta$ is $ \begin{bmatrix}-0.0769&-0.3077\\-0.9231&-0.6923\end{bmatrix}$
+\\\\
+\indent(c)\indent
+\space From $\beta$ to $C$
+\\\\
+\indent\indent\indent$\begin{bmatrix}2&6&\vdots&-6&2\\-1&-2&\vdots&1&0\end{bmatrix} =$
+$ \begin{bmatrix}1&0&\vdots&3&-2\\0&1&\vdots&-2&1\end{bmatrix}$
+\\\\\\
+\indent\indent\indent So the change of coordinates matrix from $\beta$ to $C$ is $ \begin{bmatrix}3&-2\\-2&1\end{bmatrix}$
+\\\\\\
+\indent\indent\indent From $C$ to $\beta$
+\\\\
+\indent\indent\indent$\begin{bmatrix}-6&2&\vdots&2&6\\1&0&\vdots&-1&-2\end{bmatrix} =$
+$ \begin{bmatrix}1&0&\vdots&-1&-2\\0&1&\vdots&-2&-3\end{bmatrix}$
+\\\\\\
+\indent\indent\indent So the change of coordinates matrix from $C$ to $\beta$ is $ \begin{bmatrix}-1&-2\\-2&-3\end{bmatrix}$
+\\\\
+\noindent\textbf{Question 3}
+\\\\
+The change of coordinates matrix from $\beta$ to $C$ is $\begin{bmatrix}1&3&0\\-2&-5&2\\1&4&3\end{bmatrix}$
+\\\\\\
+The $\beta$ coordinate vector for $-1 + 2t$ is $\begin{bmatrix}1&3&0\\-2&-5&2\\1&4&3\end{bmatrix} \times \begin{bmatrix}-1\\2\\0\end{bmatrix} = \begin{bmatrix}5\\-8\\7\end{bmatrix}$ 
+\\\\
+\noindent\textbf{Question 4}
+\\\\
+The rref of A is $\begin{bmatrix}7&6&-4&1\\-5&-1&0&-2\\9&-11&7&-3\\19&-9&7&1\end{bmatrix} = \begin{bmatrix}1&0&0&-0.0105\\0&1&0&2.0526\\0&0&1&2.8105\\0&0&0&0\end{bmatrix}$
+, so the column space of $A$ is \\\\\\ $span\{\begin{bmatrix}7\\-5\\9\\19\end{bmatrix}, \begin{bmatrix}6\\-1\\-11\\-9\end{bmatrix}, \begin{bmatrix}-4\\0\\7\\7\end{bmatrix}\}.$
+Since $\begin{bmatrix}7&6&-4&\vdots&1\\-5&-1&0&\vdots&1\\9&-11&7&\vdots&-1\\19&-9&7&\vdots&-3\end{bmatrix} \sim\begin{bmatrix}1&0&0&0.0105\\0&1&0&-1.0526\\0&0&1&-1.8105\\0&0&0&0\end{bmatrix}$ is consistent, the \\\\\\ $\begin{bmatrix}1\\1\\-1\\-3\end{bmatrix}$ is in the column space of $A$
+\\\\\\
+In order to find the null space of $A$, the rref of $\begin{bmatrix}7&6&-4&1&\vdots&0\\-5&-1&0&-2&\vdots&0\\9&-11&7&-3&\vdots&0\\19&-9&7&1&\vdots&0\end{bmatrix}$ is $\begin{bmatrix}1&0&0&-0.0105&0\\0&1&0&2.0526&0\\0&0&1&2.8105&0\\0&0&0&0&0\end{bmatrix}.$
+\\\\
+So the null space of $A$ is $span\{\begin{bmatrix}0.0105\\2.0526\\2.8105\\1\end{bmatrix}\}$
+\\\\
+In order for $\begin{bmatrix}1\\1\\-1\\-3\end{bmatrix}$ to be in the null space of $A$, $\begin{bmatrix}1\\1\\-1\\-3\end{bmatrix}$ must be in the $span\{\begin{bmatrix}0.0105\\2.0526\\2.8105\\1\end{bmatrix}\}$, but it does not. \\\\\\ As a result, $\begin{bmatrix}1\\1\\-1\\-3\end{bmatrix}$ is not in the null space of $A$.
+\\\\\\
+Final Answer: $\begin{bmatrix}1\\1\\-1\\-3\end{bmatrix}$ is in the column space but not in the null space of $A$.
+\\\\
+\noindent\textbf{Question 5}\\\\
+In order to form a basis for $P_3$, the coordinate matrix must span $P_3$.
+\\\\
+\indent(a)\indent
+$\begin{bmatrix}3&5&0&1\\7&1&1&16\\0&0&-2&-6\\0&-2&0&2\end{bmatrix} \sim \begin{bmatrix}1&0&0&2\\0&1&0&-1\\0&0&1&3\\0&0&0&0\end{bmatrix} $ so it spans only $P_2$ not $P_3$
+\\\\
+\indent(b)\indent
+$\begin{bmatrix}5&9&6&0\\-3&1&-2&0\\4&8&5&0\\2&-6&0&1\end{bmatrix} \sim \begin{bmatrix}1&0&0.75&0\\0&1&0.25&0\\0&0&0&1\\0&0&0&0\end{bmatrix}$ so it spans only $P_2$ not $P_3$
+\\\\\\
+\noindent\textbf{Question 6}\\\\
+Definition: $\beta = \{b_1 \hdots b_n\}$ is a basis of the vector space V if $\beta$ is a linearly independent set and $V = Span\{b_1 \hdots b_n\}$
+\\\\
+\indent 1) That every $x$ has a unique linear combination of $S$ implies that $\begin{bmatrix}b_1 & \hdots & b_n & \vdots & x\end{bmatrix}$ has exactly one answer for each $x$, which means that $\begin{bmatrix}b_1 & \hdots & b_n & \vdots & x\end{bmatrix}$ must be linearly independent.
+\\\\
+\indent 2) As given, every $x$ in $V$ can be represented as a linear combination of $S$; in the other words, $S$ spans the vector space $V$. 
+\\\\
+\indent According to the two statements above, we can conclude that $S$ is a basis of $V$
+\\\\
+\noindent\textbf{Question 7}\\\\
+In order to find the coordinates of vectors $b_1, b_2, ..., b_n$ with respect to the basis $\beta$, we need to construct the augmented matrix $\begin{bmatrix}b_1&b_2&\hdots&b_n&\vdots&b_1&b_2&\hdots&b_n\end{bmatrix}$ and reduce the left side of the augmented matrix to the rref form, which will change the right side to the coordinate matrix. The rref of the augmented matrix is $\begin{bmatrix}I&\vdots&e_1&e_2&\hdots&e_n\end{bmatrix}$ because $b_1, b_2, ..., b_n$ is the basis, which means they are independent. So the coordinate of $b_1$ is $e_1$, $b_2$ is $_2$ and so on until $b_n$ is $e_n$.
+\\\\
+\noindent\textbf{Question 8}\\\\
+\indent\indent\indent $det(B^4) = (det(B))^4 = ((1 \times 1 \times 1) + (0 \times 2 \times 1) + (1 \times 1 \times\ 2) - (1 \times 1 \times 1) - (2 \times 2 \times 1) - (1 \times 1 \times 0))^4 = \\\\
+\indent\indent\indent(-2)^4 = 16$
+\\\\
+\noindent\textbf{Question 9}
+\\\\
+\indent(a)\indent
+$ det(AB) = det(A) \times det(B) = -3 \times 4 = -12 $
+\\\\
+\indent(b)\indent
+$ det(5A) = 5 \times det(A) = 5 \times -3 = -15 $
+\\\\
+\indent(c)\indent
+$ det(B^t) = det(B) = 4 $
+\\\\
+\indent(d)\indent
+$ det(A^{-1}) = \frac{1}{det(A)} = -\frac{1}{3} $
+\\\\
+\indent(e)\indent
+$ det(A^3) = (det(A))^3 = (-3)^3 = -27 $
+\\\\
+\noindent\textbf{Question 10}
+\\\\
+\indent(a)\indent
+According to the theorem, the determinant of the given matrix is equal to $3 \times \begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix} = 3 \times 7 = 21$  
+\\\\
+\indent(b)\indent
+According to the theorem, the determinant of the given matrix is equal to $5 \times \begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix} = 5 \times 7 = 35$  
+\\\\
+\indent(c)\indent
+According to the theorem, the determinant of the given matrix is equal to $\begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix} = 7$
+\\\\
+\noindent\textbf{Question 11}
+\\\\
+\indent(a)\indent
+\space Suppose the second column is chosen.
+\\\\
+\indent\indent\indent $det = -4 \times \begin{vmatrix}3&1&-3\\-6&-4&3\\6&-4&-1\end{vmatrix} + 8\begin{vmatrix}3&-3&1\\3&1&-3\\-6&-4&3\end{vmatrix} = (-4 \times -84) + (8 \times -60) = 336 - 480 = -144$
+\\\\
+\indent(b)\indent
+\space Suppose the forth column is chosen.
+\\\\
+\indent\indent\indent $det = -6 \times \begin{vmatrix}-1&2&3\\3&4&3\\4&2&4\end{vmatrix} + 3 \times \begin{vmatrix}-1&2&3\\3&4&3\\11&4&6\end{vmatrix} = (-6 \times -40) + (3 \times -78) = 240 - 234 = 6$
+\\\\
+\noindent\textbf{Question 12}
+\\\\
+By referring to the question, $\begin{bmatrix}A_{11(20x20)}&0\\A_{21(30x20)}&A_{22(30x30)}\end{bmatrix} \times \begin{bmatrix}x_1\\\vdots\\x_{20}\\\hdots\\x_{21}\\x_{22}\\\vdots\\x_{50}\end{bmatrix} = \begin{bmatrix}b_1\\\vdots\\b_{20}\\\hdots\\b_{21}\\b_{22}\\\vdots\\b_{50}\end{bmatrix}$. The equation $Ax = b$ can be seperated into
+\\\\
+\indent 1) $A_{11(20x20)} \times \begin{bmatrix}x_1\\\vdots\\x_{20}\end{bmatrix} = \begin{bmatrix}b_1\\\vdots\\b_{20}\end{bmatrix}$
+\indent\indent and \indent\indent 2) $A_{21(30x20)} \times \begin{bmatrix}x_1\\\vdots\\x_{20}\end{bmatrix} + A_{22(30x30)} \times \begin{bmatrix}x_{21}\\x_{22}\\\vdots\\x_{50}\end{bmatrix} = \begin{bmatrix}b_{21}\\b_{22}\\\vdots\\b_{50}\end{bmatrix}$
+\\\\
+Both equation can now be solved in the matrix program that is limited to 32 rows and 32 columns.
+\end{document}

@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+\title{Answer to assignment 4}
+\author{Phumin Walaipatchara}
+\date{}
+\maketitle
+\noindent\textbf{Question 1}
+\\\\Solving L and U was shown in A4.pdf
+$$
+L =
+\begin{bmatrix}
+
+1&0&0&0&0\\
+1/3&1&0&0&0\\
+0&0&1&0&0\\
+0&0&0&1&0\\
+0&0&0&5/7&1
+
+\end{bmatrix}
+$$
+$$
+U =
+\begin{bmatrix}
+3&5&0&0&0\\
+0&1/3&0&0&0\\
+0&0&1&0&0\\
+0&0&0&7&8\\
+0&0&0&0&2/7
+\end{bmatrix}
+$$
+$
+A^{-1} = U^{-1} \times L^{-1} =
+\begin{bmatrix}
+1/3&-5&0&0&0\\
+0&3&0&0&0\\
+0&0&1/2&0&0\\
+0&0&0&1/7&-4\\
+0&0&0&0&3.5
+\end{bmatrix}
+$
+$
+\times
+\begin{bmatrix}
+1&0&0&0&0\\
+-1/3&1&0&0&0\\
+0&0&1&0&0\\
+0&0&0&1&0\\
+0&0&0&-5/7&1
+\end{bmatrix}
+=
+$
+$
+\begin{bmatrix}
+2&-5&0&0&0\\
+-1&3&0&0&0\\
+0&0&1/2&0&0\\
+0&0&0&3&-4\\
+0&0&0&-2.5&3.5
+\end{bmatrix}
+$
+\\\\\\
+\textbf{Question 2}\\
+$$
+A =
+\begin{bmatrix}
+3&5&|&0&|&0&0\\
+1&2&|&0&|&0&0\\
+\hline
+0&0&|&2&|&0&0\\
+\hline
+0&0&|&0&|&7&8\\
+0&0&|&0&|&5&6
+\end{bmatrix}
+$$
+We can find $A^{-1}$ from the inverse of each partitioned matrix.\\
+$$
+A^{-1} =
+\begin{bmatrix}
+2&-5&0&0&0\\
+-1&3&0&0&0\\
+0&0&1/2&0&0\\
+0&0&0&3&-4\\
+0&0&0&-2.5&3.5
+\end{bmatrix}
+$$
+\\\\\\\\\\\\\\\\\\\\\textbf{Question 3}\\
+Since $G_k = \begin{bmatrix}x_1&x_2&\cdots&x_k\end{bmatrix}\times\begin{bmatrix}x_1\\x_2\\\vdots\\x_k\end{bmatrix}$ \space\space so \space\space
+$G_k+1 = \begin{bmatrix}x_1&x_2&\cdots&x_k&|&x_{k+1}\end{bmatrix}\times\begin{bmatrix}x_1\\x_2\\\vdots\\x_k\\---\\x_{k+1}\end{bmatrix}$
+$= \begin{bmatrix}G_k + x_{k+1}{x_{k+1}}^T\end{bmatrix}$
+\\\\\\\textbf{Question 4}\\\\
+\indent(a)\indent\space
+$AI + BX = 0 \indent A(0) + BY = 0 \indent CI + 0(X) = Z \indent C(0) + 0(Y) = 0$\\\\
+\indent\indent\indent$BX = -A \indent BY = I \indent CI = Z$\\\\
+\indent\indent\indent Answer: \space\space$X = -B^{-1}A \indent Y = B^{-1} \indent Z = C$\\\\\\
+\indent(b)\indent\space
+$XA + B(0) = I \indent X(0) + 0(C) = 0 \indent YA + ZB = 0 \indent Y(0) + ZC = I$\\\\
+\indent\indent\indent$XA = I \indent YA + ZB = 0 \indent ZC = I$\\\\
+\indent\indent\indent Answer: \space\space$X = A^{-1} \indent Y = -C^{-1}BA^{-1} \indent Z = C^{-1}$\\\\\\
+\indent(b)\indent\space
+$AX + B(0) = I \indent AY + B(0) = 0 \indent AZ + BI = 0 \indent 0(X) +I(0) = 0 \\ \indent\indent\indent 0(Y) + I(0) = 0 \indent 0(Z) + II = I$\\\\
+\indent\indent\indent$AX = I \indent AY = 0 \indent AZ + B = I$\\\\
+\indent\indent\indent Answer: \space\space$X = A^{-1} \indent AY = 0 \indent Z = -A^{-1}B$\\
+\indent\indent\indent $AY = 0$ cannot be wrote in $Y = ?$ form since $AB = 0$ does not imply that either $A$ or $B$ is $0$, \\\indent\indent\indent according to the theorem.
+\\\\\\\textbf{Question 5}\\\\
+\indent\indent\indent According to the theorem, the augmented matrix $\begin{bmatrix}A&|&I\end{bmatrix}$ can be transformed to $\begin{bmatrix}I&|&A^{-1}\end{bmatrix}$ by the elementary row operations. Because A is a lower triangular matrix, the first element on the diagonal(on the first column) can be used in row replacement and scaling in order to change the below element on the same column into 0, so the first column will be $\begin{bmatrix}1\\0\\0\\\vdots\end{bmatrix}$ and the same procedure will be applied for the rest elements on the diagonal and the rest columns, which will transform $\begin{bmatrix}A&|&I\end{bmatrix}$ to $\begin{bmatrix}I&|&A^{-1}\end{bmatrix}$. Interchanging is not required because the above procedure can be done by applying only row replacement and scaling. Since the upper triangular part of $A$ is 0, when doing the described procedure, it remains the same, so we can concluded that $A^{-1}$ is still the lower triangular matrix.
+\\\\\\\\\textbf{Question 6}\\\\
+\indent(a)\indent\space
+$Ly = b$\indent\indent
+$\begin{bmatrix}1&0&0\\-1&1&0\\2&-5&1\end{bmatrix}\times\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix} = \begin{bmatrix}-7\\5\\2\end{bmatrix}$\indent\indent
+$\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix} = \begin{bmatrix}-7\\-2\\6\end{bmatrix}$\\\\\\
+\indent\indent\space\space\space\space$Ux = y$\indent\indent
+$\begin{bmatrix}3&-7&-2\\0&-2&-1\\0&0&-1\end{bmatrix}\times\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix} = \begin{bmatrix}-7\\-2\\6\end{bmatrix}$\indent\indent
+$\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix} = \begin{bmatrix}3\\4\\-6\end{bmatrix}$\\\\\\\\\\
+\indent(b)\indent\space
+$Ly = b$\indent\indent
+$\begin{bmatrix}1&0&0&0\\2&1&0&0\\-1&0&1&0\\-4&3&-5&1\end{bmatrix}\times\begin{bmatrix}y_1\\y_2\\y_3\\y_4\end{bmatrix} = \begin{bmatrix}1\\7\\0\\3\end{bmatrix}$\indent\indent
+$\begin{bmatrix}y_1\\y_2\\y_3\\y_4\end{bmatrix} = \begin{bmatrix}1\\5\\1\\-3\end{bmatrix}$\\\\\\
+\indent\indent\space\space\space\space$Ux = y$\indent\indent
+$\begin{bmatrix}1&-2&-4&-3\\0&-3&1&0\\0&0&2&1\\0&0&0&1\end{bmatrix}\times\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix} = \begin{bmatrix}1\\5\\1\\-3\end{bmatrix}$\indent\indent
+$\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix} = \begin{bmatrix}-2\\-1\\2\\-3\end{bmatrix}$
+\end{document}

@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+\title{Answer to Assignment 7}
+\author{Phumin Walaipatchara}
+\date{}
+\maketitle
+\noindent\textbf{Question 1}
+\\\\
+\indent(a)
+\indent
+$Ax = 0$
+\indent
+$A^TAx = A^T0$
+\indent
+$A^TAx = 0$
+\\\\
+\indent(b)
+\indent
+$A^TAx = 0$
+\indent
+$x^TA^TAx = x^T0$
+\indent
+$x^TA^TAx = 0$
+\indent
+$(Ax)^TAx = 0$ 
+\indent
+Let
+$
+Ax = \begin{bmatrix}a_1\\a_2\\\vdots\end{bmatrix}
+$
+\\\\
+\indent\indent\indent
+From $(Ax)^TAx = 0$ , we can conclude that ${a_1}^2 + {a_2}^2 + \hdots = 0$. So $a_1 = a_2 = \hdots = 0$, which
+\\\\
+\indent\indent\indent
+means $Ax = 0$.
+\\\\
+\noindent\textbf{Question 2}
+\\\\
+\indent(a)
+According to the fact that $A$ is a linearly independent matrix and $Ax = 0$, there must be a unique solution to $x$. And from $A^TAx = 0$, $A^TA$ has to be a linearly independent matrix in order to provide a unique solution to $x$. According to Inverse Matrix Theorem, if columns of a matrix is linearly independent, that matrix is invertable, so $A^TA$ is invertable.
+\\\\
+\indent(b)
+In order to be a linearly independent matrix, a matrix must have pivots in every columns. And to do so, a matrix must have more or equal  rows as columns. So A must correspond to the mentioned argument.
+\\\\
+\indent(c)
+Since A is a linearly independent matrix, $Rank(A) = dim(col(A)) = 0$
+\\\\
+\noindent\textbf{Question 3}
+\\\\
+Let $A = \begin{bmatrix}a_1&a_2&\hdots\end{bmatrix}$, $|a_1| = |a_2| = \hdots = 1$ and the dot product of the difference columns of $A$ is $0$. 
+\\\\
+According to the equation used to find the least squares solution, $A^TAx = A^Tb$, $A^TA = \begin{bmatrix}a_1\cdot a_1&a_1\cdot a_2&a_1\cdot a_3&\hdots\\a_2\cdot a_1&a_2\cdot a_2&a_3\cdot a_2&\hdots\\a_3\cdot a_1&a_3\cdot a_2&a_3\cdot a_3&\hdots\\\vdots&\vdots&\vdots&\ddots\end{bmatrix}= \begin{bmatrix}|a_1|^2&0&0&\hdots\\0&|a_2|^2&0&\hdots\\0&0&|a_3|^2&\hdots\\\vdots&\vdots&\vdots&\ddots\end{bmatrix} = I$. So $x = A^Tb$
+\\\\
+\noindent\textbf{Question 4}
+\\\\
+\indent(a) This problem involves 3 unknowns.
+\\\\
+\indent\indent According to the equation $A^TAx = A^Tb$ that is used to find the solution to the least square
+\\
+\indent\indent
+solution, we can construct the augmented matrix
+$
+\begin{bmatrix}4&2&2&\vdots&14\\2&2&0&\vdots&4\\2&0&2&\vdots&10\end{bmatrix}
+\sim
+\begin{bmatrix}1&0&1&\vdots&5\\0&1&-1&\vdots&-3\\0&0&0&\vdots&0\end{bmatrix}
+$.
+\\\\
+\indent\indent
+As a result, there are infinite answer to the 3 unknowns: 
+$
+\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
+$
+that corresponds to the first, 
+\\\\
+\indent\indent
+second, and third column of 
+$
+A = \begin{bmatrix}5-x_3\\-3+x_3\\x_3\end{bmatrix} = \begin{bmatrix}5\\-3\\0\end{bmatrix} + \begin{bmatrix}-1\\1\\1\end{bmatrix}x_3
+$
+\\\\
+\textbf{Code for part (a)}
+\begin{lstlisting}
+A = [1 1 0;1 1 0;1 0 1;1 0 1]
+b = [1;3;8;2]
+X = rref([A'*A A'*b]) % An augnemted matrix
+\end{lstlisting}
+\indent 
+\\\\
+\indent (b) This problem involves 3 unknowns.
+\\\\
+\indent\indent According to the equation $A^TAx = A^Tb$ that is used to find the solution to the least square
+\\
+\indent\indent
+solution, we can construct the augmented matrix
+$
+\begin{bmatrix}6&3&3&\vdots&27\\3&3&0&\vdots&12\\3&0&3&\vdots&15\end{bmatrix}
+\sim
+\begin{bmatrix}1&0&1&\vdots&5\\0&1&-1&\vdots&-1\\0&0&0&\vdots&0\end{bmatrix}
+$.
+\\\\
+\indent\indent
+As a result, there are infinite answer to the 3 unknowns: 
+$
+\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
+$
+that corresponds to the first, 
+\\\\
+\indent\indent
+second, and third column of 
+$
+A = \begin{bmatrix}5-x_3\\-1+x_3\\x_3\end{bmatrix} = \begin{bmatrix}5\\-1\\0\end{bmatrix} + \begin{bmatrix}-1\\1\\1\end{bmatrix}x_3
+$
+\\\\
+\textbf{Code for part (b)}
+\begin{lstlisting}
+A = [1 1 0;1 1 0;1 1 0;1 0 1;1 0 1;1 0 1]
+b = [7;2;3;6;5;4]
+X = rref([A'*A A'*b]) % An augnemted matrix
+\end{lstlisting}
+\indent\\
+\noindent\textbf{Question 5}
+\\\\
+A = $\begin{bmatrix}1&x_1&{x_1}^2&{x_1}^3\\1&x_2&{x_2}^2&{x_2}^3\\\vdots&\vdots&\vdots&\vdots\end{bmatrix} 
+y = \begin{bmatrix}y_1\\y_2\\\vdots\end{bmatrix}$
+\\\\
+So $\begin{bmatrix}\beta_0\\\beta_1\\\beta_2\\\beta_3\end{bmatrix} = inv(A^TA)A^Ty$
+\\
+\begin{lstlisting}
+x=linspace(0,10,1000)';
+y=6+5*x+3*x.^2+3*x.^3+x.^3.*rand(size(x));
+plot(x,y,'bo')
+hold on;
+A = [ones(1000, 1) x x.^2 x.^3]
+ANS = inv(A' * A)*A'*y
+plot(x, ANS(1) + ANS(2)*x + ANS(3)*x.^2 + ANS(4)*x.^3, 'r', 'LineWidth', 3)
+\end{lstlisting}
+\noindent\textbf{Question 6}
+\begin{lstlisting}
+D = dlmread('Question6matlabData.txt')
+A = D(:,1,1)
+Y = D(:,2,1)
+scatter(A, Y)
+hold on;
+A = [ones(size(A, 1), 1) A sin(0.5.*pi.*A)]
+ANS = inv(A'*A)*A'*Y
+plot(A, ANS(1) + ANS(2)*A + ANS(3)*sin(0.5*pi*A), 'r', 'LineWidth', 3)
+\end{lstlisting}
+\end{document}
