@@ -1,0 +1,34 @@
+1)
+
+mystery(0, 9)
+-------------
+    a = 0
+    b = 9
+    myst_rest = mystery(1, 7) = 15
+    return 24
+
+    mystery(1, 7)
+    -------------
+        a = 1
+        b = 7
+        myst_rest = mystery(2, 5) = 8 
+        return 15
+
+        mystery(2, 5)
+        ---------------------
+            a = 2
+            b = 5
+            myst_rest = mystery(3, 3) = 3
+            return 8
+
+		mystery(3, 3)
+        	---------------------
+            	a = 3
+            	b = 3
+           	return 3
+
+2) 24
+
+3) 4 stacks
+
+4) mystery(3, 4) 

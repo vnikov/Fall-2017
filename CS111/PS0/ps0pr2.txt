@@ -1,0 +1,105 @@
+# 0 = Start rule
+# 1 = North
+# 2 = East
+# 3 = West
+# 4 = South
+
+## start with xxxx
+0 xxxx -> E 0
+
+## Heading North
+# Bottom-right corner
+0 xExS -> N 1
+# Stick to East wall
+0 xE*x -> N 1 
+
+## Heading East
+# Bottom-left corner 
+0 xxWS -> E 2
+# For wall to the South
+0 *xxS -> E 2
+
+## Heading West
+# Top-right corner
+0 NExx -> W 3
+
+## Heading South
+# Top-left corner
+0 NxWx -> S 0
+
+## Starting at DEAD END
+0 NEWx -> S 4
+
+0 NExS -> W 3
+
+0 NxWS -> E 2
+
+0 xEWS -> N 1
+
+##################################################################
+
+######## State 1 (North) ##############
+
+# Stick to the right wall
+1 xE*x -> N 1
+
+# T-junction and top-left corner
+1 *x*x -> E 2
+
+# top-right corner
+1 NExx -> W 3
+
+# DEAD END
+1 NEWx -> S 4
+
+######## End state 1 #################
+
+######## State 2 (East) ##############
+
+# Stick to the right wall
+2 *xxS -> E 2
+
+# T-junction and top-right corner
+2 **xx -> S 4
+
+# Bottom-right corner
+2 xExS -> N 1
+
+# DEAD END
+2 NExS -> W 3
+
+######## End state 2 #################
+
+######## State 3 (West) ##############
+
+# Stick to right wall
+3 Nxx* -> W 3
+
+# T-junction and bottom-left corner
+3 xx** -> N 1
+
+# Top-left corner
+3 NxWx -> S 4
+
+# DEAD END
+3 NxWS -> E 2
+
+######## End state 3 #################
+
+######## State 4 (South) #############
+
+# Stick to the right wall
+4 x*Wx -> S 4
+
+# T-junction and bottom-right corner
+4 x*x* -> W 3
+
+# bottom-left corner
+4 xxWS -> E 2
+
+# DEAD END
+4 xEWS -> N 1
+
+######## End state 4 #################
+
+##################################################################

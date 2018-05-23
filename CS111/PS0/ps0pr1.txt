@@ -1,0 +1,20 @@
+# Starting by heading North
+0 x*** -> N 0
+
+# Once reached the wall to the North, move South and switch to state 1
+0 N*** -> S 1
+
+# Heading South
+1 ***x -> S 1
+
+# Once reached the wall to the South, move West and switch to state 0
+1 **xS -> W 0
+
+# Once reached the bottom-left corner, move East and switch to state 2
+1 **WS -> E 2
+
+#Heading East
+2 *x** -> E 2
+
+#Once reached the wall to the East, move North and switch to state 0
+2 *E** -> N 0

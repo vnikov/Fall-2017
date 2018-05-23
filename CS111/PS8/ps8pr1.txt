@@ -1,0 +1,34 @@
+1.
+   a. mound
+      redound
+   b. round
+      redound
+   c. found
+      redound
+   d. zounds
+      redound
+   e. mound
+      ground
+      redound
+2. if b < a:
+       print('pound')	because the if a >= b will be evaluated first.
+   elif b == c:
+       print('mound')	because a must be less than b and mote than c, so a must 			be equal to a and c, which will correspond to the if a >= 			b first.
+   if a == c:
+       print('hound')	because a must be less than b and b must be less than c 			and a must be equal to c in order for this block to be 				excited. In the other word, a must be equal to b and equal 			to c, which will correspond to the if a >= b first.
+3.
+
+::: python
+x1 = int(input('Enter an integer: '))
+x2 = int(input('Enter another one: '))
+
+print('You entered', x1, 'and', x2)
+
+if x1 > 0 and x2 > 0:
+    print('They are both positive.')
+else:
+    print('They are both negative.')
+x
+dist = abs(x1 - x2)
+print('The distance between them on a number line is', dist)
+

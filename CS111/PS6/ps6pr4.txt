@@ -1,0 +1,24 @@
+#
+# ps6pr4.txt (Problem Set 6, Problem 4)
+#
+# The Fibonacci sequence
+#
+
+00   read r1		# read the input value(n) and store in r1
+01   setn r2 1		# r2 is the first number in the Fibonacci numbers(1)
+02   setn r3 1		# r3 is the second number in the Fibonacci numbers(1)
+03   setn r13 0		# initialize r13 as the return value from the function
+04   setn r5 0		# initialize r5 as the the register to keep track the time the number was printed
+05   call r14 08	# call the function
+06   write r13		# print the value in r13(the return value from the function)
+07   halt 	
+08   write r2		# print the value in r2
+09   addn r5 1		# r5 = r5 + 1
+10   add r13 r13 r2	# accumulate the sum by the value in r2
+11   sub r6 r5 r1	# r6 = r5 - r1
+12   jnez r6 14		# if r6 is not equal to zero, jump to line 14
+13   jumpr r14		# exit the function
+14   add r4 r2 r3	# r4 = r2 + r3(compute the next Fibonacci number)
+15   copy r2 r3		# r2 = r3
+16   copy r3 r4		# r3 = r4
+17   jumpn 08		# jump to line 8

@@ -1,0 +1,12 @@
+1.
+- 2 distinct lists
+- 2 variable: a and c
+
+- [4, 5, 6]
+- from 0 to 2
+- when the loop has gone through all elements in values
+
+- a = [0, 1, 2]   b = [4, 5, 6]   c = [0, 1, 2]   x = 5
+- x is immutable, so the value does not change. a and c point to the same memory address, so the changes made during the function affects both variables. b refers to the different memory address with the same value as the original value of a.
+
+2.

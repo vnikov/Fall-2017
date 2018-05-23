@@ -1,0 +1,51 @@
+1)
+    w    |   scored_words
+------------------------------------------------------------------------
+  'LCs'  |  
+  'LCs'  |   [['s', 'LCs'],
+  'are'  |  
+  'are'  |   [['s', 'LCs'], ['e', 'are'],
+  'very' |  
+  'very' |   [['s', 'LCs'], ['e', 'are'], ['y', 'very'], 
+  'cool' |  
+  'cool' |   [['s', 'LCs'], ['e', 'are'], ['y', 'very'], ['l', 'cool']]
+
+2) ['y', 'very']
+3) 'very'
+4) The mystery function examines the right-most letter of each word and return the word that the right-most letter comes last in the alphabetical order.
+5)
+mystery2('banana')
+------------------
+    s = 'banana'
+    result_rest = mystery2('anana') = 'aaa'
+    return 'aaa'
+
+    mystery2('anana')
+    -----------------
+        s = 'anana'
+        result_rest = mystery2('nana') = 'aa'
+        return 'aaa'
+
+        mystery2('nana')
+        ---------------------
+            s = 'nana'
+            result_rest = mystery2('ana') = 'aa'
+            return 'aa'
+
+	    mystery2('ana')
+            ---------------------
+                s = 'ana'
+                result_rest = mystery2('na') = 'a;
+                return 'aa'
+
+		mystery2('na')
+        	---------------------
+            	    s = 'na'
+            	    result_rest = mystery2('a') = 'a'
+            	    return 'a'
+
+		    mystery2('a')
+        	    ---------------------
+            	        s = 'a'
+            	        return 'a'
+6) 'aaa'

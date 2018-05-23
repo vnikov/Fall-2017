@@ -1,0 +1,25 @@
+#
+# ps6pr5.txt (Problem Set 6, Problem 5)
+#
+# Calling a distance function twice
+#
+
+00   read r1		# read the input value and store in r1
+01   read r2		# read the input value and store in r2
+02   read r3		# read the input value and store in r3
+03   copy r4 r2		# r4 = r2
+04   call r14 15	# call the function at line 15
+05   copy r5 r13	# r5 = r13
+06   copy r4 r3		# r4 = r3
+07   call r14 15	# call the function at line 15
+08   copy r6 r13	# r6 = r13
+09   sub r4 r5 r6	# r4 = r5 - r6
+10   jgtz r4 13		# if r4 is greater than 0, jump to line 13
+11   write r2		# print the value of r2
+12   jumpn 14		# jump to line 14
+13   write r3		# print the value of r3
+14   halt
+15   sub r13 r4 r1	# r13 = r4 - r1
+16   jgtz r13 18	# if r13 is greater than 0, jump to line 18
+17   neg r13 r13	# r13 = -r13
+18   jumpr r14		# exit the function

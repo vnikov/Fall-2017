@@ -1,0 +1,9 @@
+00   read r1          # read number from user
+  01   setn r2 111      # set register to number that will be output
+  02   jeqzn r1 08      # if we don't need to call the function again, exit
+  03   call r14 06      # call the function
+  04   addn r1 -1       # subtract one from the number of times to call the fn
+  05   jumpn 01         # go to beginning of loop
+  06   write r2         # start of function; output 111
+  07   jumpr r14        # return from function
+  08   halt
